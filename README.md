@@ -1,2 +1,2 @@
 # JaJanken
-This is a rock, paper scissor game against the computer.
+This is a rock, paper, scissors game against the computer.
