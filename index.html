@@ -1,13 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JaJanken</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-    <script src="index.js"></script>
-    
+
+    <div id="header">
+        <h1 class="title">JaJanken</h1>
+        <h2 class="subtitle">Let's play Rock, Paper, Scissor's with Gon! Loser has to fight Hisoka.</h2>
+    </div>
+
+    <div id="vid-container">
+        <video class="video" width="500px" height="auto" controls>
+            <source src="./JaJankenScene.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+    </div>
+
+
+    <div id="mid-header">
+        <h2 class="h2">Choose your weapon!</h2>
+        <h3 class="h3">First person to score 5 points is the winner</h3>
+    </div>
+
+
+    <div id="pp">
+        <div id="your-container">
+            <img src="./saitama.png" id="image" />
+            <p id="user-score">Your Score: 0</p>
+        </div>
+
+        <div id="gon-container">
+            <img src="./gon.png" id="image" />
+            <p id="gon-score">Gon's Score: 0</p>
+        </div>
+    </div>
+
+
+    <div id="icons" class="icons">
+        <button class="rock-icon" type="button"> <img src="./rock.png" alt="Rock image"></button>
+        <button class="paper-icon" type="button"> <img src="./paper.png" alt="Paper image"></button>
+        <button class="scissors-icon" type="button"> <img src="./scissors.png" alt="Scissors image"></button>
+    </div>
+
+    <h3 id="result-text">Let's Begin!</h3>
+
+    <h5 id="copyright">
+        Copyright © 2022 UsmanQureshi
+        <a href="https://github.com/u3qureshi/JaJanken" class="fa fa-github" style="font-size: 1.3em;"></a>
+    </h5>
+
+
 </body>
+
+
+
+<script>
+    function setupVideos() {
+        for (const video of document.querySelectorAll('video')) {
+            video.controls = false
+            video.addEventListener('mouseover', () => {
+                video.controls = 'controls'
+            })
+            video.addEventListener('mouseout', () => {
+                video.controls = false
+            })
+        }
+    }
+    window.addEventListener('load', setupVideos, false)
+</script>
+
 </html>

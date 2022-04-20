@@ -1,0 +1,132 @@
+body {
+    background: rgb(0, 58, 0) no-repeat fixed center;
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+}
+
+#header .title {
+    display: flex;
+    justify-content: center;
+    font-size: 75px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+}
+
+#header .subtitle {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-size: 45px;
+    font-family: cursive;
+}
+
+#pp img {
+    width: 250px;
+    height: auto;
+    border-radius: 70%;
+    border: 5px solid darkmagenta;
+    margin: 30px;
+}
+
+#vid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.video {
+    width: 500px;
+    height: auto;
+    padding: 10px;
+    border: 12px outset #e0e0e0;
+    background-color: black;
+}
+
+#mid-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#mid-header .h2 {
+    font-size: 45px;
+    font-family: cursive;
+    font-weight: bold;
+}
+
+#mid-header .h3 {
+    font-size: 30px;
+    font-family: cursive;
+}
+
+#pp {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 25px;
+}
+
+#pp p {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#icons {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin: 150px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#icons img {
+    width: 200px;
+    height: auto;
+}
+
+#icons button {
+    border-radius: 50%;
+    background-color: darkgoldenrod;
+}
+
+#result-text {
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+#copyright {
+    display: flex;
+    justify-content: center;
+    font-size: 17px;
+}
+
+.fa {
+    padding-left: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: red;
+}
+
+
+/* Add a hover effect if you want */
+
+.fa:hover {
+    color: aqua;
+    transform: scale(1.3);
+}
