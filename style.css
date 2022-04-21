@@ -2,6 +2,17 @@ body {
     background: rgb(0, 58, 0) no-repeat fixed center;
     display: flex;
     flex-direction: column;
+    z-index: -999;
+    position: relative;
+}
+
+
+/*If we add padding or a border or margin to something, it does not add to the size. It is included in the content.*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 #header {
@@ -10,20 +21,55 @@ body {
     padding-bottom: 0;
 }
 
-#header .title {
-    display: flex;
-    justify-content: center;
-    font-size: 75px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 900;
+.subtitle::after {
+    content: "";
+    background-image: url(./hisoka.jpg);
+    background-size: 100% 100%;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: solid whitesmoke 5px;
+    margin: 10px;
 }
 
-#header .subtitle {
+.title {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    font-size: 75px;
+    font-family: 'Rubik Bubbles', cursive;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: .9;
+    color: rgb(255, 255, 0);
+}
+
+.title::before,
+.title::after {
+    content: '';
+    height: 100%;
+    display: block;
+    position: absolute;
+}
+
+.title::after {
+    background: rgba(0, 0, 0, 0.689);
+    width: 100vw;
+    height: 110%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: -3;
+}
+
+.subtitle {
     display: flex;
     justify-content: center;
     padding: 20px;
     font-size: 45px;
-    font-family: cursive;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: 200;
 }
 
 #pp img {
@@ -33,6 +79,32 @@ body {
     border: 5px solid darkmagenta;
     margin: 30px;
 }
+
+
+/* div.your-container a {
+    text-decoration: none;
+    color: white;
+    cursor: default;
+    font-weight: normal;
+}
+
+div.your-container a span {
+    visibility: hidden;
+    position: absolute;
+    left: 15em;
+    top: -2.3em;
+    background: black;
+    width: 17em;
+    border: 1px solid #404040;
+    font-size: 0.9em;
+    padding: 0.3em;
+    cursor: default;
+    line-height: 1.4;
+}
+
+div.your-container a:hover span {
+    visibility: visible;
+} */
 
 #vid-container {
     display: flex;
@@ -60,13 +132,30 @@ body {
 
 #mid-header .h2 {
     font-size: 45px;
-    font-family: cursive;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: 200;
     font-weight: bold;
 }
 
 #mid-header .h3 {
     font-size: 30px;
-    font-family: cursive;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: 200;
+}
+
+#mid-header img {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: solid green 5px;
+    transform: scale(1);
+    transition: 200ms;
+}
+
+#mid-header img:hover {
+    transform: scale(1.2);
 }
 
 #pp {
@@ -80,34 +169,72 @@ body {
     display: flex;
     justify-content: center;
     font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: 200;
 }
 
 #icons {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
-    margin: 150px;
+    margin: 250px;
     margin-top: 0;
     margin-bottom: 0;
 }
 
 #icons img {
-    width: 200px;
+    width: 160px;
     height: auto;
+    padding: 20px;
 }
 
 #icons button {
-    border-radius: 50%;
-    background-color: darkgoldenrod;
+    transition: ease-out 0.4s;
+    border: 5px solid yellow;
+    background: black;
+    position: relative;
+    z-index: 1;
 }
 
-#result-text {
+#icons button:hover {
+    cursor: pointer;
+}
+
+#icons button::before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    right: 50%;
+    bottom: 0%;
+    opacity: 0;
+    content: '';
+    background-color: yellow;
+}
+
+#icons button:hover::before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+}
+
+.result-text {
     font-size: 35px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: 200;
     display: flex;
     justify-content: center;
-    margin-bottom: 80px;
+    margin: 0;
+}
+
+.result-text1 {
+    margin-top: 20px;
+}
+
+.result-text2 {
+    margin-bottom: 150px;
 }
 
 #copyright {

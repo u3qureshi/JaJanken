@@ -6,16 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JaJanken</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Rubik+Bubbles&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div id="header">
-        <h1 class="title">JaJanken</h1>
-        <h2 class="subtitle">Let's play Rock, Paper, Scissor's with Gon! Loser has to fight Hisoka.</h2>
-    </div>
+    <h1 class="title">JaJanken ✊📄✂</h1>
+    <h2 class="subtitle">Let's play Rock, Paper, Scissor's with Gon! <br> Loser has to fight Hisoka.</h2>
 
     <div id="vid-container">
         <video class="video" width="500px" height="auto" controls>
@@ -27,30 +27,35 @@
 
     <div id="mid-header">
         <h2 class="h2">Choose your weapon!</h2>
+        <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vox.com%2F2014%2F5%2F1%2F5671404%2Fyour-complete-guide-to-using-science-to-win-at-rock-paper-scissors&psig=AOvVaw1sLKrXPEezkzruOLEkpYGb&ust=1650602907991000&source=images&cd=vfe&ved=0CA0QjhxqFwoTCJjvurSxpPcCFQAAAAAdAAAAABAD"
+            target="_blank">
+            <img src="./rockpaperscissors-strategy.jpg" title="Some tips and tricks to success in Rock, Paper, Scissors." />
+        </a>
         <h3 class="h3">First person to score 5 points is the winner</h3>
     </div>
 
 
     <div id="pp">
-        <div id="your-container">
-            <img src="./saitama.png" id="image" />
+        <div class="your-container">
+            <img class="saitama-image" src="./saitama.png" title="This is you" />
             <p id="user-score">Your Score: 0</p>
         </div>
 
-        <div id="gon-container">
-            <img src="./gon.png" id="image" />
+        <div class="gon-container">
+            <img class="gon-image" src="./gon.png" title="This is Gon" />
             <p id="gon-score">Gon's Score: 0</p>
         </div>
     </div>
 
 
-    <div id="icons" class="icons">
-        <button class="rock-icon" type="button"> <img src="./rock.png" alt="Rock image"></button>
-        <button class="paper-icon" type="button"> <img src="./paper.png" alt="Paper image"></button>
-        <button class="scissors-icon" type="button"> <img src="./scissors.png" alt="Scissors image"></button>
+    <div id="icons">
+        <button class="rock-button" type="button"> <img src="./rock.png" alt="Rock image" title="Rock"></button>
+        <button class="paper-button" type="button"> <img src="./paper.png" alt="Paper image" title="Paper"></button>
+        <button class="scissors-button" type="button"> <img src="./scissors.png" alt="Scissors image" title="Scissors"></button>
     </div>
 
-    <h3 id="result-text">Let's Begin!</h3>
+    <h3 class="result-text result-text1">Let's Begin!</h3>
+    <h3 class="result-text result-text2"></h3>
 
     <h5 id="copyright">
         Copyright © 2022 UsmanQureshi
@@ -58,10 +63,19 @@
     </h5>
 
 
+
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="./index.js"></script>
 </body>
-
-
-
 <script>
     function setupVideos() {
         for (const video of document.querySelectorAll('video')) {
